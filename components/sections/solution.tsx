@@ -19,9 +19,7 @@ export default function Solution() {
                 Complete Traceability.
               </h2>
               <p className="text-lg ">
-                Basiq360 is the end-to-end track and trace solution built specifically for food exporters in the Middle
-                East. From batch creation at the farm to final consumer delivery, every product is tracked in real-time
-                with full regulatory compliance.
+                Basiq360 is the end-to-end track and trace solution built specifically for food exporters. From batch creation at the farm to final consumer delivery, every product is tracked in real-time with full regulatory compliance.
               </p>
             </div>
 

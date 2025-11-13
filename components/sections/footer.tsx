@@ -10,7 +10,7 @@ export default function Footer() {
           <div className="md:col-span-1">
             <h3 className="text-xl font-bold mb-4">Basiq360</h3>
             <p className="text-background/70 text-sm">
-              End-to-end track & trace for food exporters in the Middle East.
+              End-to-end track & trace for food exporters.
             </p>
           </div>
 

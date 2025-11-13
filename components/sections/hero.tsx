@@ -21,7 +21,7 @@ export default function Hero() {
                 Farm to Fork Visibility.
               </h1>
               <p className="text-xl sm:text-2xl text-foreground/80">
-                Complete regulatory compliance and real-time traceability for food exports in the Middle East.
+                Complete regulatory compliance and real-time traceability for food exports.
               </p>
             </div>
 
@@ -29,7 +29,7 @@ export default function Hero() {
               <Button
                 onClick={() => scrollToSection("contact")}
                 size="lg"
-                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full px-8 cursor-pointer"
+                className="bg-primary hover:bg-primary/90 text-primary-foreground font-semibold rounded-full px-8 cursor-pointer" 
               >
                 Get Started
               </Button>

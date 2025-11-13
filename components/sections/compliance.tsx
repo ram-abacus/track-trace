@@ -11,14 +11,14 @@ export default function Compliance() {
   const standards = [
     {
       name: "Digital Passport",
-      icon: "🔐",
+      icon: "Digital Product Passport.svg",
       description: "EU-compliant digital product identity for complete transparency",
     },
-    { name: "GS1", icon: "📦", description: "Global barcode and GTIN standards for supply chain interoperability" },
-    { name: "SFDA", icon: "✓", description: "Saudi Food & Drug Authority compliance for Middle East exports" },
-    { name: "GACC", icon: "🌍", description: "China General Administration of Customs clearance requirements" },
-    { name: "EPCIS", icon: "📡", description: "Supply chain event visibility standards for real-time tracking" },
-    { name: "ISO 22000", icon: "📋", description: "Food safety management systems certification" },
+    { name: "GS1", icon: "GS1.svg", description: "Global barcode and GTIN standards for supply chain interoperability" },
+    { name: "SFDA", icon: "SFDA.svg", description: "Saudi Food & Drug Authority compliance for Middle East exports" },
+    { name: "GACC", icon: "GACC.svg", description: "China General Administration of Customs clearance requirements" },
+    { name: "EPCIS", icon: "EPCIS.svg", description: "Supply chain event visibility standards for real-time tracking" },
+    { name: "ISO 22000", icon: "ISO.svg", description: "Food safety management systems certification" },
   ]
 
   return (
@@ -42,7 +42,13 @@ export default function Compliance() {
               className="p-6 bg-primary/5 border border-primary/20 rounded-xl hover:border-accent/40 hover:bg-accent/5 transition-all group cursor-pointer"
             >
               <div className="flex items-start gap-4">
-                <div className="text-4xl">{standard.icon}</div>
+                <div className="text-4xl">
+                  <img
+                    src={standard.icon}
+                    alt={standard.name + " Icon"}
+                    className="h-10 w-10 object-contain group-hover:scale-105 transition-transform"
+                  />
+                  </div>
                 <div className="flex-1">
                   <div className="font-bold text-lg text-primary mb-2 group-hover:text-accent transition-colors">
                     {standard.name}
