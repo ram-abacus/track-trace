@@ -1,30 +1,12 @@
 "use client"
 
 import type React from "react"
+import Script from "next/script"
 
 import { Button } from "@/components/ui/button"
 import { useEffect , useState } from "react"
 
 export default function CTA() {
-  const [isLoaded, setIsLoaded] = useState(false)
-  
-    useEffect(() => {
-      // Load HubSpot form script
-      const script = document.createElement("script")
-      script.src = "https://js-na2.hsforms.net/forms/embed/242830238.js"
-      script.defer = true
-      script.onload = () => {
-        setIsLoaded(true)
-      }
-      document.body.appendChild(script)
-  
-      return () => {
-        // Cleanup script on unmount
-        if (document.body.contains(script)) {
-          document.body.removeChild(script)
-        }
-      }
-    }, [isLoaded])
 
   return (
     <section id="contact" className="w-full py-24 sm:py-32 px-6 bg-gradient-to-r from-accent/15 to-primary/15 ">
@@ -39,12 +21,16 @@ export default function CTA() {
           </p>
         </div>
 
+        <Script
+          src="https://js-na2.hsforms.net/forms/embed/242830238.js"
+          strategy="afterInteractive"
+        />
         <div
-          className="hs-form-frame bg-white p-8 rounded-2xl"
+          className="hs-form-frame bg-white rounded-2xl"
           data-region="na2"
-          data-form-id="d5cd240b-2c51-4e7d-ad9d-59bdd9253c25"
+          data-form-id="371299e1-44d5-4eab-bb07-cf9c760665f0"
           data-portal-id="242830238"
-        ></div>
+        />
 
         {/* <form
           onSubmit={handleSubmit}

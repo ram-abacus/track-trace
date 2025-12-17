@@ -1,27 +1,8 @@
 "use client"
 
-import { useEffect, useState } from "react"
+import Script from "next/script"
 
 export default function ContactForm() {
-  const [isLoaded, setIsLoaded] = useState(false)
-
-  useEffect(() => {
-    // Load HubSpot form script
-    const script = document.createElement("script")
-    script.src = "https://js-na2.hsforms.net/forms/embed/242830238.js"
-    script.defer = true
-    script.onload = () => {
-      setIsLoaded(true)
-    }
-    document.body.appendChild(script)
-
-    return () => {
-      // Cleanup script on unmount
-      if (document.body.contains(script)) {
-        document.body.removeChild(script)
-      }
-    }
-  }, [isLoaded])
 
   return (
     <section id="contact" className="w-full py-24 sm:py-32 px-6 bg-gradient-to-b from-background to-primary/5">
@@ -33,13 +14,16 @@ export default function ContactForm() {
           </p>
         </div>
 
-
+        <Script
+          src="https://js-na2.hsforms.net/forms/embed/242830238.js"
+          strategy="afterInteractive"
+        />
         <div
           className="hs-form-frame"
           data-region="na2"
-          data-form-id="d5cd240b-2c51-4e7d-ad9d-59bdd9253c25"
+          data-form-id="371299e1-44d5-4eab-bb07-cf9c760665f0"
           data-portal-id="242830238"
-        ></div>
+        />
 
         {/* <form onSubmit={handleSubmit} className="space-y-6 bg-card border border-border rounded-2xl p-8 md:p-10">
           {submitted && (
